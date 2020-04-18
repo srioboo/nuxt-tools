@@ -8,7 +8,6 @@
     </div>
 
     <div id="identificadores">
-
         <div>
             <div>StoreId</div>
             <div>
@@ -17,6 +16,7 @@
                         {{index}}. {{ storeId.name }}
                     </option>
                 </select>
+            </div>
         </div>
         <div>
             <div>CatalogId</div>
@@ -48,36 +48,36 @@
          ng-model="cadena1" ng-true-value="'zarahome'" ng-false-value="''"/>
         <input type="checkbox" value="myrl"
          ng-model="cadena2" ng-true-value="'stradivarius'" ng-false-value="''"/>
-
     </div>
 
         <div>
-        <select name="" ng-model="template">
-            <option v-for="x in consultasRest" value="{{plantilla}}" v-bind:key="x.tipo">
-            {{x.tipo + ' - ' + x.plantilla}}
-            </option>
-        </select>
+            <select name="" ng-model="template">
+                <option v-for="x in consultasRest" :value="plantilla" v-bind:key="x.tipo">
+                {{x.tipo + ' - ' + x.plantilla}}
+                </option>
+            </select>
 
-    </div>
+        </div>
 
     <div class="main">
-         <span>{{cadena1 + cadena2}}</span><br/>
-         <div ng-repeat="x in entornos">
-        <a compile="template" href="template">{{template}}</a>
+        <span>{{cadena1 + cadena2}}</span><br/>
+        <div ng-repeat="x in entornos">
+            <a compile="template" href="template">{{template}}</a>
 
-         <!--a
-        href="http://{{x.urlz}}/{{version}}/catalog/store/{{storeId}}/{{catalogId}}/category/{{categoryId}}/product"
-         compile="template">
-             http://{{x.urlz}}/{{version}}/catalog/store/{{storeId}}/{{catalogId}}/category/{{categoryId}}/product
-         </a -->
-
+            <!--a
+            href="http://{{x.urlz}}/{{version}}/catalog/store/{{storeId}}/{{catalogId}}/category/{{categoryId}}/product"
+            compile="template">
+                http://{{x.urlz}}/{{version}}/catalog/store/{{storeId}}/{{catalogId}}/category/{{categoryId}}/product
+            </a -->
          </div>
      </div>
-    </section>
+ </section>
 </template>
 
 <style lang="scss">
-
+    .main {
+        border: 1px solid red;
+    }
 </style>
 
 <script>
