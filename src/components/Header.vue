@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="burger">
+    <div class="burger" v-on:click="togleMenu()">
       <div class="line1"></div>
       <div class="line1"></div>
       <div class="line1"></div>
@@ -26,7 +26,7 @@
   </header>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import Vue from 'vue';
 
 export default Vue.extend({
@@ -39,11 +39,18 @@ export default Vue.extend({
       text: 'Text',
     };
   },
-  /* methods: {
-    sayhello() {
+  methods: {
+    togleMenu() {
+      const nav = document.getElementById('navmenu');
+      if(nav.getAttribute('class')){
+        nav.removeAttribute('class');
+      } else {
+        nav.setAttribute('class', 'hide');
+      }
+
       console.log('Hello!!');
     },
-  }, */
+  },
 });
 </script>
 

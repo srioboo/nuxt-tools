@@ -1,7 +1,7 @@
 <template>
   <section class="main" id="s1">
     <div class="form">
-      <select ng-model="version">
+      <select v-bind:key="version">
         <option value="1">1</option>
         <option value="2">2</option>
       </select>
@@ -96,9 +96,11 @@
     <div class="main">
       <span>{{ cadena1 + cadena2 }}</span
       ><br />
-      <div ng-repeat="x in entornos">
+      <div v-for="x in entornos" :key="x.id">
         <a compile="template" href="template">{{ template }}</a>
-
+        http://{{ x.urlz }}/{{ version }}/catalog/store/{{ storeId }}/{{
+          catalogId
+        }}/category/{{ categoryId }}/product
         <!--a
             href="http://{{x.urlz}}/{{version}}/catalog/store/{{storeId}}/{{catalogId}}/category/{{categoryId}}/product"
             compile="template">
@@ -116,5 +118,45 @@
 </style>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      stores: {
+        id: 0,
+        name: 'test',
+      },
+      catalogs: {
+        id: 0,
+        name: 10001,
+      },
+      categoryId: 'ESE1',
+      consultasRest: {
+        tipo: 'uno',
+        plantilla: 'https://asdaf',
+      },
+      plantilla: 'sfas',
+      cadena1: 'hola',
+      cadena2: 'mundo',
+      template: { id: 1, name: 'tesmplate' },
+      entornos: {
+        id: 0,
+        name: 'STG',
+        id: 1,
+        name: 'PRE',
+      },
+      version: 'version',
+    };
+  },
+  methods: {
+    getEntorno() {
+      this.entornos = {
+        id: 0,
+        name: 'STG',
+      };
+    },
+    getVersion() {
+      this.version = 'version';
+    },
+  },
+};
 </script>

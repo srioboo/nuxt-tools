@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav id="navmenu">
     <ul class="menu">
       <li class="nav-item">
         <div class="nav-link">Ver todos Menu</div>
@@ -38,6 +38,10 @@ nav {
   color: white;
   //height: 50px;
   align-items: center;
+
+  &.hide {
+    display: none;
+  }
 
   .menu {
     margin: 10px 10px 10px 20px;
