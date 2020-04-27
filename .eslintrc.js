@@ -3,7 +3,12 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['plugin:vue/essential', '@vue/prettier'],
+  //extends: ['plugin:vue/essential', '@vue/prettier', "prettier/@typescript-eslint"],
+  extends: [
+    'plugin:vue/essential',
+    '@vue/prettier',
+    'prettier/@typescript-eslint',
+  ],
   plugins: ['prettier'],
   // watch this for explaining why some of this is here
   // https://www.youtube.com/watch?time_continue=239&v=YIvjKId9m2c

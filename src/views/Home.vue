@@ -2,8 +2,12 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <Header />
-    <Menu />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="flex-content">
+      <Menu />
+      <CompAcordeon>
+        <HelloWorld msg="Welcome to Your Vue.js App" />
+      </CompAcordeon>
+    </div>
   </div>
 </template>
 
@@ -12,6 +16,7 @@
 import HelloWorld from '@/components/HelloWorld.vue';
 import Menu from '@/components/Menu.vue';
 import Header from '@/components/Header.vue';
+import CompAcordeon from '@/components/CompAcordeon.vue';
 
 export default {
   name: 'Home',
@@ -19,6 +24,7 @@ export default {
     HelloWorld,
     Header,
     Menu,
+    CompAcordeon,
   },
 };
 </script>
