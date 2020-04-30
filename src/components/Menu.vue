@@ -50,7 +50,9 @@ export default Vue.extend({
 @import '../css/_variables.scss';
 
 nav {
-  background-color: $background-main;
+  //background-color: $background-main;
+  //border-right: 1px solid $dark-green;
+  box-shadow: 0px 0px 5px 0px $dark-green;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -78,6 +80,8 @@ nav {
       /*margin: 5px 0px;
       height: 150px;*/
       width: 100%;
+      //border-top: 1px solid $background-main;
+      border-bottom: 1px solid $background-main;
 
       .nav-link {
         // border: 1px solid rgb(0, 36, 0);
@@ -85,20 +89,23 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: black;
 
         &.router-link-exact-active {
           /*border: 1px dotted blue;*/
-          background-color: rgb(0, 36, 0);
+          background-color: $dark-green;
+          color: $white;
         }
 
         &.router-link-active {
           /*background-color: rgb(0, 36, 0);*/
         }
-      }
-    }
 
-    .nav-item:hover {
-      background-color: rgb(0, 36, 0);
+        &:hover {
+          background-color: $main-green;
+          color: $white !important;
+        }
+      }
     }
   }
 }
