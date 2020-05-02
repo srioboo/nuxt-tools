@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <main>
     <h1>Text de ckeditor</h1>
     <textarea v-model.lazy="editorData"></textarea>
 
     <ckeditor v-model="editorData" :config="editorConfig"></ckeditor>
     <!-- <pre style="color: black;">{{ editorData }}</pre> -->
-  </div>
+  </main>
 </template>
 
 <script lang="js">
@@ -15,7 +15,7 @@ import CKEditor from 'ckeditor4-vue';
 Vue.use( CKEditor );
 
 export default Vue.extend({
-  name: 'Editor',
+  name: 'EditorComponent',
   data() {
     return {
       editorData: '<p>Content of the editor.</p>',

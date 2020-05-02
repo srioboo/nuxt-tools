@@ -1,32 +1,20 @@
 <template>
-  <div>
-    <Header />
-    <div class="flex-content">
-      <Menu />
-      <div class="flexbox">
-        <div class="flex-content-div">
-          <div class="nav blue">
-            uno
-          </div>
-          <div class="main red">
-            dos
-          </div>
-        </div>
+  <main>
+    <div class="flex-content-div">
+      <div class="nav blue">
+        uno
+      </div>
+      <div class="main red">
+        dos
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
-import Header from '@/components/Header.vue';
-
 export default {
   name: 'Flexbox',
-  components: {
-    Header,
-    Menu,
-  },
+  components: {},
 };
 </script>
 

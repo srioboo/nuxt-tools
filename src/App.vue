@@ -1,13 +1,32 @@
 <template>
   <div id="app">
-    <router-view />
+    <HeaderComp />
+    <div class="flex-content">
+      <MenuComp />
+      <router-view />
+    </div>
   </div>
 </template>
+
+<script>
+import MenuComp from '@/components/MenuComponent.vue';
+import HeaderComp from '@/components/HeaderComponent.vue';
+export default {
+  components: {
+    HeaderComp,
+    MenuComp,
+  },
+};
+</script>
 
 <style lang="scss">
 * {
   margin: 0;
   padding: 0;
+}
+
+main {
+  width: 100vw;
 }
 
 #app {
@@ -32,20 +51,16 @@
 }
 
 .flex-content {
-  /*border: 1px solid #555;*/
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  /*padding: 10px 0;*/
-  /*width: 100vw;*/
+  // width: 100vw;
   flex-wrap: nowrap;
-  /*justify-content: space-around;*/
+  // justify-content: space-around;
 
   h3 {
     margin: 0;
     display: inherit;
-    /*padding: 10px;*/
-    /*height: 100px;*/
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
