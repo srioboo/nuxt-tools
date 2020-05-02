@@ -36,7 +36,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'Menu',
+  name: 'MenuComponent',
   props: {
     msg: String,
   },
@@ -50,13 +50,12 @@ export default Vue.extend({
 @import '../css/_variables.scss';
 
 nav {
-  background-color: $background-main;
-  display: flex;
+  box-shadow: 0px 0px 5px 0px $dark-green;
+  /*display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  color: white;
-  //height: 50px;
-  align-items: center;
+  justify-content: flex-start;*/
+  color: $white;
+  //align-items: center;
   width: 20vw;
 
   &.hide {
@@ -64,41 +63,41 @@ nav {
   }
 
   .menu {
-    /*margin: 10px 10px 10px 20px;*/
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-self: center;
-    width: 100%;
+    justify-content: flex-start;*/
+    //align-self: center;
+    //width: 100vw;
     height: 100vh;
 
     .nav-item {
       text-decoration: none;
       list-style: none;
-      /*margin: 5px 0px;
-      height: 150px;*/
-      width: 100%;
+      //width: 100%;
+      border-bottom: 1px solid $background-main;
 
       .nav-link {
-        // border: 1px solid rgb(0, 36, 0);
         height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: black;
 
         &.router-link-exact-active {
-          /*border: 1px dotted blue;*/
-          background-color: rgb(0, 36, 0);
+          background-color: $dark-green;
+          color: $white;
         }
 
         &.router-link-active {
-          /*background-color: rgb(0, 36, 0);*/
+          background-color: $dark-green;
+          color: $white;
+        }
+
+        &:hover {
+          background-color: $main-green;
+          color: $white !important;
         }
       }
-    }
-
-    .nav-item:hover {
-      background-color: rgb(0, 36, 0);
     }
   }
 }

@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 .colapGroup {
   margin: 20px;
-  width: auto;
+  /*width: 100vw;*/
 }
 
 .colapsable {

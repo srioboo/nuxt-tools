@@ -1,24 +1,16 @@
 <template>
-  <div class="">
-    <Header />
-    <div class="flex-content">
-      <Menu />
-      <Editor class="editor" />
-    </div>
-  </div>
+  <main>
+    <EditorComp class="editor" />
+  </main>
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
-import Header from '@/components/Header.vue';
-import Editor from '@/components/Editor.vue';
+import EditorComp from '@/components/EditorComponent.vue';
 
 export default {
   name: 'Ckeditor',
   components: {
-    Header,
-    Menu,
-    Editor,
+    EditorComp,
   },
 };
 </script>
