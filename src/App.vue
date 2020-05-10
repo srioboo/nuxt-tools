@@ -34,7 +34,7 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: $grey; //#2c3e50;
 }
 
 #nav {
@@ -42,10 +42,10 @@ main {
 
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: $grey; //#2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $green;
     }
   }
 }
@@ -68,10 +68,10 @@ main {
     align-content: center;
   }
 
-  ul {
+  /*ul {
     align-items: center;
     font-weight: bolder;
     align-content: center;
-  }
+  }*/
 }
 </style>

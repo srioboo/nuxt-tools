@@ -55,10 +55,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
-@import '../css/_variables.scss';
-
 header {
-  background-color: $background-main;
+  background-color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

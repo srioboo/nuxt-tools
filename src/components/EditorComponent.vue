@@ -1,21 +1,30 @@
 <template>
-  <main>
-    <h1>Text de ckeditor</h1>
-    <textarea v-model.lazy="editorData"></textarea>
+  <div>
+    <AcordeonComp>
+      <textarea v-model.lazy="editorData"></textarea>
 
-    <ckeditor v-model="editorData" :config="editorConfig"></ckeditor>
+      <div style="color: red;">{{ editorData }}</div>
+    </AcordeonComp>
+
+    <AcordeonComp>
+      <ckeditor v-model="editorData" :config="editorConfig"></ckeditor>
+    </AcordeonComp>
     <!-- <pre style="color: black;">{{ editorData }}</pre> -->
-  </main>
+  </div>
 </template>
 
 <script lang="js">
 import Vue from 'vue';
 import CKEditor from 'ckeditor4-vue';
+import AcordeonComp from '@/components/AcordeonComponent.vue';
 
 Vue.use( CKEditor );
 
 export default Vue.extend({
   name: 'EditorComponent',
+  components:{
+    AcordeonComp,
+  },
   data() {
     return {
       editorData: '<p>Content of the editor.</p>',
@@ -86,6 +95,12 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+main {
+  h1 {
+    color: black;
+  }
+}
+
 div {
   justify-content: flex-start !important;
   margin: 10px 0;

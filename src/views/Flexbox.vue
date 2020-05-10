@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss">
 .flex-content-div {
-  border: 1px solid #555;
+  border: 1px solid $grey; //#555;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -50,10 +50,10 @@ export default {
 }
 
 .blue {
-  border: 1px solid blue;
+  border: 1px solid $blue;
 }
 
 .red {
-  border: 1px solid red;
+  border: 1px solid $red;
 }
 </style>

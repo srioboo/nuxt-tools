@@ -8,7 +8,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'HomeComponent',
+  name: 'HxComponent',
   props: {
     msg: String,
   },
@@ -20,18 +20,22 @@ export default Vue.extend({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+h1 {
+  margin-top: 20px;
+  font-size: 1.3em;
 }
-ul {
+
+h3 {
+  margin-top: 20px;
+}
+/*ul {
   list-style-type: none;
   padding: 0;
 }
 li {
-  /*display: inline-block;*/
   margin: 0 10px;
 }
 a {
   color: #42b983;
-}
+}*/
 </style>
