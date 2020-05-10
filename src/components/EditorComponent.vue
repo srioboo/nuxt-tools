@@ -1,15 +1,14 @@
 <template>
   <div>
     <AcordeonComp>
-      <textarea v-model.lazy="editorData"></textarea>
-
-      <div style="color: red;">{{ editorData }}</div>
+      <ckeditor v-model="editorData" :config="editorConfig"></ckeditor>
     </AcordeonComp>
 
     <AcordeonComp>
-      <ckeditor v-model="editorData" :config="editorConfig"></ckeditor>
+      <textarea v-model.lazy="editorData"></textarea>
+
+      <div class="visualizador" v-html="editorData"></div>
     </AcordeonComp>
-    <!-- <pre style="color: black;">{{ editorData }}</pre> -->
   </div>
 </template>
 
@@ -107,7 +106,7 @@ div {
 }
 
 textarea {
-  width: 95%;
+  width: 100%;
 }
 
 .text-tiny {
@@ -124,5 +123,11 @@ textarea {
 
 .text-huge {
   font-size: 1.8em;
+}
+
+.visualizador {
+  border: 1px solid red;
+  padding: 5px;
+  width: 100%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <main>
     <HxComp msg="Test de ckeditor" />
-    <EditorComp class="editor" />
+    <EditorComp class="flex-content" />
   </main>
 </template>
 
@@ -18,14 +18,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.editor {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: $white;
-  /* height: 50px; */
-  align-items: center;
-  width: 70vw;
-}
-</style>
+<style lang="scss" scoped></style>

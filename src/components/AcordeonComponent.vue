@@ -30,6 +30,8 @@ export default {
 .colapGroup {
   margin: 20px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .colapsable {
@@ -47,6 +49,7 @@ export default {
 
 .grupo {
   margin: 5px 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
