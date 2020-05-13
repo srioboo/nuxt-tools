@@ -1,28 +1,21 @@
 <template>
   <main>
-    <EditorComp class="editor" />
+    <HxComp msg="Test de ckeditor" />
+    <EditorComp class="flex-content" />
   </main>
 </template>
 
 <script>
 import EditorComp from '@/components/EditorComponent.vue';
+import HxComp from '@/components/HxComponent';
 
 export default {
   name: 'Ckeditor',
   components: {
+    HxComp,
     EditorComp,
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.editor {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  color: white;
-  /* height: 50px; */
-  align-items: center;
-  width: 70vw;
-}
-</style>
+<style lang="scss" scoped></style>
