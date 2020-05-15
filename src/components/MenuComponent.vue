@@ -7,19 +7,32 @@
         Flexbox
       </router-link> -->
     </router-link>
-    <router-link tag="div" class="nav-link" to="/ckeditor" exact>
-      Ckeditor
-    </router-link>
-    <router-link tag="div" class="nav-link" :to="{ name: 'Flexbox' }" exact>
-      Flexbox
-    </router-link>
+    <div class="nav-link" @click="toggleShow">
+      Test submenu
+    </div>
+    <div class="sub-nav-group hide">
+      <router-link tag="div" class="sub-nav-link" to="/ckeditor" exact>
+        Ckeditor
+      </router-link>
+      <router-link
+        tag="div"
+        class="sub-nav-link"
+        :to="{ name: 'Flexbox' }"
+        exact
+      >
+        Flexbox
+      </router-link>
+      <router-link tag="div" class="sub-nav-link" :to="{ name: 'Rest' }" exact>
+        Rest
+      </router-link>
+    </div>
     <router-link tag="div" class="nav-link" :to="{ name: 'Rest' }" exact>
       Rest
     </router-link>
   </nav>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue';
 
 export default Vue.extend({
@@ -29,6 +42,12 @@ export default Vue.extend({
   },
   data() {
     return {};
+  },
+  methods: {
+    toggleShow: function (event) {
+      const elemento = event.target;
+      elemento.nextElementSibling.classList.toggle('hide');
+    },
   },
 });
 </script>
@@ -43,6 +62,12 @@ nav {
 
   &.hide {
     display: none;
+  }
+
+  .sub-nav-group {
+    &.hide {
+      display: none;
+    }
   }
 
   .nav-link {
@@ -78,49 +103,16 @@ nav {
     }
   }
 
-  /*.menu {
-    //height: 100vh;
-
-    .nav-item {
-      text-decoration: none;
-      list-style: none;
-      border-bottom: 1px solid $green; //$background-main;
-
-      .nav-link {
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $black;
-
-        &.router-link-exact-active {
-          background-color: $green-darker;
-          color: $white;
-        }
-
-        &.router-link-active {
-          background-color: $green-darker;
-          color: $white;
-        }
-
-        &:hover {
-          background-color: $green;
-          color: $white !important;
-        }
-      }
-    }
-
-    .submenu {
-      color: black;
-
-      .nav-item {
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 0px;
-      }
-    }
-  }*/
+  .sub-nav-link {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+    color: $black;
+    height: 50px;
+    align-items: center;
+    padding-left: 30px;
+    background-color: $green-light;
+    border-bottom: 1px solid $green;
+  }
 }
 </style>
