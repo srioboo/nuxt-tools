@@ -9,11 +9,13 @@ const getBookmarks = async function () {
     let data = parseList(response);
 
     const bookmarks = data.map((b: any) => {
-      console.log(b.nombre);
+      // console.log(b.nombre);
       return b;
     });
   } catch (error) {
+    /* eslint-disable no-console */
     console.log(error);
+    /* eslint-disable no-console */
     return [];
   }
 };

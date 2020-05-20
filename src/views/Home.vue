@@ -105,11 +105,11 @@ export default {
     filterElements: function () {
       this.bookmarks.forEach((group) => {
         const direccion = group.direcciones.filter((dir) => {
-          //console.log(dir.name + ' and ' + this.filtro);
+          // console.log(dir.name + ' and ' + this.filtro);
           return dir.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
         });
-        console.log('direccion' + direccion);
-        //console.log('index: ' + index);
+        // console.log('direccion' + direccion);
+        // console.log('index: ' + index);
         if (direccion.length > 0) {
           this.filtrado.push(direccion[0].name);
         }
@@ -118,7 +118,9 @@ export default {
       });
     },
     clearFiltros: function () {
-      console.log('clear');
+      /* eslint-disable no-console */
+      // console.log('clear');
+      /* eslint-disable no-console */
       this.filtrado = [];
       this.search = '';
     },
