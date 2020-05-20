@@ -33,6 +33,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 // @ is an alias to /src
 import HxComp from '@/components/HxComponent.vue';
 import AcordeonComp from '@/components/AcordeonComponent.vue';
@@ -44,7 +45,7 @@ export default {
     return {
       search: '',
       filtrado: [],
-      bookmarks: [
+      /*bookmarks: [
         {
           id: 0,
           nombre: 'Tiendas',
@@ -89,10 +90,17 @@ export default {
             },
           ],
         },
-      ],
+      ],*/
     };
   },
+  async created() {
+    await this.loadBookmarks();
+  },
   methods: {
+    ...mapActions(['getBookmarksAction']),
+    async loadBookmarks() {
+      await this.getBookmarksAction();
+    },
     // TODO: completar el filtro
     filterElements: function () {
       this.bookmarks.forEach((group) => {
@@ -123,6 +131,9 @@ export default {
         return false;
       }
     },
+  },
+  computed: {
+    ...mapState(['bookmarks']),
   },
   components: {
     HxComp,
