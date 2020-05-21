@@ -7,7 +7,7 @@
     </div>
 
     <div class="logo">
-      The Logo
+      VueTools
     </div>
 
     <div>
@@ -47,8 +47,6 @@ export default Vue.extend({
       } else {
         nav.setAttribute('class', 'hide');
       }
-
-      console.log('Hello!!');
     },
   },
 });
