@@ -17,7 +17,8 @@
       </div>
     </div>
 
-    <div v-for="grupos in bookmarks" :key="grupos.id" class="flex-content">
+    <!-- TODO: evitar el bookmarks[0], modificando data.services.ts?? -->
+    <div v-for="grupos in bookmarks[0]" :key="grupos.id" class="flex-content">
       <AcordeonComp :grp="grupos.nombre">
         <div class="grupo">
           <div v-for="bkm in grupos.direcciones" :key="bkm.name">
@@ -45,52 +46,6 @@ export default {
     return {
       search: '',
       filtrado: [],
-      /*bookmarks: [
-        {
-          id: 0,
-          nombre: 'Tiendas',
-          direcciones: [
-            {
-              name: 'Amazon',
-              url: 'https://lwww.amazon.es',
-            },
-            {
-              name: 'PcComponentes',
-              url: 'http://www.pccomponentes.com',
-            },
-            {
-              name: 'Facebook',
-              url: 'Facebook',
-            },
-          ],
-        },
-        {
-          id: 1,
-          nombre: 'Redes sociales',
-          direcciones: [
-            {
-              name: 'Facebook',
-              url: 'Facebook',
-            },
-            {
-              name: 'Twitter',
-              url: 'https://www.twitter.com',
-            },
-            {
-              name: 'Google+',
-              url: 'https://plus.google.com',
-            },
-            {
-              name: 'Instagram',
-              url: 'https://www.instagram.com',
-            },
-            {
-              name: 'Linkedin',
-              url: 'https://www.Linkedin.com',
-            },
-          ],
-        },
-      ],*/
     };
   },
   async created() {
@@ -118,9 +73,6 @@ export default {
       });
     },
     clearFiltros: function () {
-      /* eslint-disable no-console */
-      // console.log('clear');
-      /* eslint-disable no-console */
       this.filtrado = [];
       this.search = '';
     },
