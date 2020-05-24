@@ -17,7 +17,8 @@
       </div>
     </div>
 
-    <div v-for="grupos in bookmarks" :key="grupos.id" class="flex-content">
+    <!-- TODO: evitar el bookmarks[0], modificando data.services.ts?? -->
+    <div v-for="grupos in bookmarks[0]" :key="grupos.id" class="flex-content">
       <AcordeonComp :grp="grupos.nombre">
         <div class="grupo">
           <div v-for="bkm in grupos.direcciones" :key="bkm.name">
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 // @ is an alias to /src
 import HxComp from '@/components/HxComponent.vue';
 import AcordeonComp from '@/components/AcordeonComponent.vue';
@@ -44,64 +46,25 @@ export default {
     return {
       search: '',
       filtrado: [],
-      bookmarks: [
-        {
-          id: 0,
-          nombre: 'Tiendas',
-          direcciones: [
-            {
-              name: 'Amazon',
-              url: 'https://lwww.amazon.es',
-            },
-            {
-              name: 'PcComponentes',
-              url: 'http://www.pccomponentes.com',
-            },
-            {
-              name: 'Facebook',
-              url: 'Facebook',
-            },
-          ],
-        },
-        {
-          id: 1,
-          nombre: 'Redes sociales',
-          direcciones: [
-            {
-              name: 'Facebook',
-              url: 'Facebook',
-            },
-            {
-              name: 'Twitter',
-              url: 'https://www.twitter.com',
-            },
-            {
-              name: 'Google+',
-              url: 'https://plus.google.com',
-            },
-            {
-              name: 'Instagram',
-              url: 'https://www.instagram.com',
-            },
-            {
-              name: 'Linkedin',
-              url: 'https://www.Linkedin.com',
-            },
-          ],
-        },
-      ],
     };
   },
+  async created() {
+    await this.loadBookmarks();
+  },
   methods: {
+    ...mapActions(['getBookmarksAction']),
+    async loadBookmarks() {
+      await this.getBookmarksAction();
+    },
     // TODO: completar el filtro
     filterElements: function () {
       this.bookmarks.forEach((group) => {
         const direccion = group.direcciones.filter((dir) => {
-          //console.log(dir.name + ' and ' + this.filtro);
+          // console.log(dir.name + ' and ' + this.filtro);
           return dir.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1;
         });
-        console.log('direccion' + direccion);
-        //console.log('index: ' + index);
+        // console.log('direccion' + direccion);
+        // console.log('index: ' + index);
         if (direccion.length > 0) {
           this.filtrado.push(direccion[0].name);
         }
@@ -110,7 +73,6 @@ export default {
       });
     },
     clearFiltros: function () {
-      console.log('clear');
       this.filtrado = [];
       this.search = '';
     },
@@ -123,6 +85,9 @@ export default {
         return false;
       }
     },
+  },
+  computed: {
+    ...mapState(['bookmarks']),
   },
   components: {
     HxComp,
