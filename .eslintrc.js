@@ -1,17 +1,23 @@
 module.exports = {
   root: true,
   env: {
-    node: true,
+    browser: true,
+    node: true
   },
-  //extends: ['plugin:vue/essential', '@vue/prettier', "prettier/@typescript-eslint"],
+  parserOptions: {
+    parser: 'babel-eslint'
+  },
   extends: [
-    'plugin:vue/essential',
-    '@vue/prettier',
-    'prettier/@typescript-eslint',
+    '@nuxtjs',
+    'prettier',
+    'prettier/vue',
+    'plugin:prettier/recommended',
+    'plugin:nuxt/recommended'
   ],
-  plugins: ['prettier'],
-  // watch this for explaining why some of this is here
-  // https://www.youtube.com/watch?time_continue=239&v=YIvjKId9m2c
+  plugins: [
+    'prettier'
+  ],
+  // add your custom rules here
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -30,8 +36,5 @@ module.exports = {
         ignoreWhenBindingPresent: true,
       },
     ],
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
-  },
-};
+  }
+}

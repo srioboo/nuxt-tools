@@ -1,0 +1,157 @@
+<template>
+  <main>
+    <Hx msg="Bookmarks" />
+    <!-- TODO: refactorizar filtros <FiltrosComp /> -->
+    <div class="filtro">
+      <input
+        v-model="search"
+        type="text"
+        value=""
+        @keyup.enter="filterElements"
+      />
+      <button class="btn-primary" @click="clearFiltros">
+        limpiar filtros
+      </button>
+      <div v-for="filtro in filtrado" :key="filtro.name">
+        <button class="btn-filtro">{{ filtro }} x</button>
+      </div>
+    </div>
+
+    <!-- TODO: evitar el bookmarks[0], modificando data.services.ts?? -->
+    <div
+      v-for="grupos in bookmarks.bookmarks"
+      :key="grupos.id"
+      class="flex-content"
+    >
+      <Acordeon :grp="grupos.nombre">
+        <div class="grupo">
+          <div v-for="bkm in grupos.direcciones" :key="bkm.name">
+            <div v-if="esBuscado(bkm.name)" class="name">
+              <a :href="bkm.url">{{ bkm.name }}</a>
+            </div>
+            <div v-if="esBuscado(bkm.name)" class="url">{{ bkm.url }}</div>
+          </div>
+        </div>
+      </Acordeon>
+    </div>
+  </main>
+</template>
+
+<script>
+import { mapActions, mapState } from 'vuex';
+// @ is an alias to /src
+import Hx from '@/components/Hx.vue';
+import Acordeon from '@/components/Acordeon.vue';
+// TODO: refactorizar filtros import FiltrosComp from '@/components/FiltrosComponent';
+
+export default {
+  name: 'Bookmarks',
+  components: {
+    Hx,
+    Acordeon,
+    // TODO: refactorizar filtros FiltrosComp,
+  },
+  async asyncData({ $content, params, error, store }) {
+    // usando la api de content
+
+    console.log('en el asyncdata');
+
+    const response = await $content('./db')
+      .fetch()
+      .catch(err => {
+        // error({ statusCode: 404, message: 'Page not found' });
+        console.error(err);
+      });
+
+    store.commit('setBkms', response);
+
+    // store.commit('reloadBkms', response);
+
+    return { response };
+  },
+  data() {
+    return {
+      search: '',
+      filtrado: [],
+      response: [],
+    };
+  },
+  computed: {
+    ...mapState(['bookmarks']),
+  },
+  async created() {
+    // await this.loadBookmarks();
+  },
+
+  methods: {
+    ...mapActions(['getBookmarksAction']),
+    async loadBookmarks() {
+      console.log('SRN cargando... ');
+      await this.getBookmarksAction();
+    },
+    // TODO: completar el filtro
+    filterElements() {
+      this.bookmarks.forEach(group => {
+        const direccion = group.direcciones.filter(dir => {
+          // console.log(dir.name + ' and ' + this.filtro);
+          return dir.name.toLowerCase().includes(this.search.toLowerCase());
+        });
+        // console.log('direccion' + direccion);
+        // console.log('index: ' + index);
+        if (direccion.length > 0) {
+          this.filtrado.push(direccion[0].name);
+        }
+
+        // group.direcciones = direccion;
+      });
+    },
+    clearFiltros() {
+      this.filtrado = [];
+      this.search = '';
+    },
+    esBuscado(name) {
+      if (this.filtrado.length > 0 && this.filtrado.includes(name)) {
+        return true;
+      } else if (this.filtrado.length === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+  /* mutations: {
+    reloadBkms(state, response) {
+      state.bookmarks = response;
+    },
+  }, */
+};
+</script>
+
+<style lang="scss" scoped>
+.filtro {
+  display: flex;
+  justify-items: flex-start;
+  margin-left: 50px;
+
+  .btn-primary {
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: blue;
+    height: 30px;
+    color: white;
+    font-weight: 900;
+    padding: 5px 10px;
+    margin: 0 5px;
+    box-shadow: 2px 2px 3px 0px black;
+  }
+
+  .btn-filtro {
+    margin: 0 5px;
+    padding: 0 10px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+  }
+}
+</style>
