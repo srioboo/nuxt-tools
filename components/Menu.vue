@@ -23,13 +23,13 @@
       <router-link
         tag="div"
         class="sub-nav-link"
-        :to="{ name: 'Flexbox' }"
+        :to="{ path: 'flexbox' }"
         exact
       >
         Flexbox
       </router-link>
     </div>
-    <router-link tag="div" class="nav-link" :to="{ name: 'Rest' }" exact>
+    <router-link tag="div" class="nav-link" :to="{ path: 'rest' }" exact>
       Rest
     </router-link>
   </nav>

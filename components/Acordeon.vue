@@ -48,7 +48,6 @@ export default {
 }
 
 .grupo {
-  margin: 5px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,14 +55,28 @@ export default {
 
   div {
     margin: 5px 0;
-    display: flex;
-    align-content: flex-start;
+    border: 1px solid $grey-lgt-75; // #80808070;
+    padding: 0px 5px;
+    border-radius: 9px;
 
-    .name {
-      width: 20%;
-    }
-    .url {
-      width: 70%;
+    a {
+      margin: 5px 0;
+      display: flex;
+      align-content: flex-start;
+      text-decoration: none;
+
+      .name {
+        border: 0;
+        width: 20%;
+        color: $green;
+        font-weight: 900;
+      }
+
+      .url {
+        border: 0;
+        color: $grey;
+        width: 70%;
+      }
     }
   }
 }

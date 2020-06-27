@@ -7,9 +7,10 @@ $black-ter:    hsl(0, 0%, 14%) !default;
 $grey-darker:  hsl(0, 0%, 21%) !default;
 $grey-dark:    hsl(0, 0%, 29%) !default;
 $grey:         hsl(0, 0%, 48%) !default;
-$grey-light:   hsl(0, 0%, 71%) !default;
-$grey-lighter: hsl(0, 0%, 86%) !default;
-$grey-lightest: hsl(0, 0%, 93%) !default;
+$grey-lgt:     hsl(0, 0%, 71%) !default;
+$grey-lgt-75:  hsla(0, 0%, 71%, 0.75) !default;
+$grey-lgtr:    hsl(0, 0%, 86%) !default;
+$grey-lgts:    hsl(0, 0%, 93%) !default;
 
 $white-ter:    hsl(0, 0%, 96%) !default;
 $white-bis:    hsl(0, 0%, 98%) !default;
@@ -103,10 +104,10 @@ $scheme-invert-ter: $black-ter !default;
 
 $background: $white-ter !default;
 
-$border: $grey-lighter !default;
-$border-hover: $grey-light !default;
-$border-light: $grey-lightest !default;
-$border-light-hover: $grey-light !default;
+$border: $grey-lgtr !default;
+$border-hover: $grey-lgt !default;
+$border-light: $grey-lgts !default;
+$border-light-hover: $grey-lgt !default;
 
 // Text colors
 
@@ -132,7 +133,7 @@ $link-dark: findDarkColor($link) !default;
 $link-visited: $purple !default;
 
 $link-hover: $grey-darker !default;
-$link-hover-border: $grey-light !default;
+$link-hover-border: $grey-lgt !default;
 
 $link-focus: $grey-darker !default;
 $link-focus-border: $blue !default;
@@ -156,6 +157,6 @@ $custom-colors: null !default;
 $custom-shades: null !default;
 
 //$colors: mergeColorMaps(("white": ($white, $black), "black": ($black, $white), "light": ($light, $light-invert), "dark": ($dark, $dark-invert), "primary": ($primary, $primary-invert, $primary-light, $primary-dark), "link": ($link, $link-invert, $link-light, $link-dark), "info": ($info, $info-invert, $info-light, $info-dark), "success": ($success, $success-invert, $success-light, $success-dark), "warning": ($warning, $warning-invert, $warning-light, $warning-dark), "danger": ($danger, $danger-invert, $danger-light, $danger-dark)), $custom-colors) !default;
-//$shades: mergeColorMaps(("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-light, "grey-lighter": $grey-lighter, "white-ter": $white-ter, "white-bis": $white-bis), $custom-shades) !default;
+//$shades: mergeColorMaps(("black-bis": $black-bis, "black-ter": $black-ter, "grey-darker": $grey-darker, "grey-dark": $grey-dark, "grey": $grey, "grey-light": $grey-lgt, "grey-lighter": $grey-lgtr, "white-ter": $white-ter, "white-bis": $white-bis), $custom-shades) !default;
 
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 !default;

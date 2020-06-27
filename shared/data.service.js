@@ -4,11 +4,23 @@ import { API } from './config';
 const getBookmarks = async function() {
   try {
     const response = await axios.get(`${API}/bookmarks`);
+
+    // this.$content
+
+    /* const response = await context.$content('./db')
+      .fetch()
+      .catch(err => {
+        // error({ statusCode: 404, message: 'Page not found' });
+        console.error(err);
+      }); */
+
     const data = parseList(response);
 
     const bookmarks = data.map(b => {
       return b;
     });
+    console.log('devolviendo los bookmarks');
+    console.log(bookmarks);
     return bookmarks;
   } catch (error) {
     /* eslint-disable no-console */
