@@ -68,13 +68,13 @@ export default {
       .name {
         border: 0;
         width: 20%;
-        color: $green;
+        color: $green-lgt-30;
         font-weight: 900;
       }
 
       .url {
         border: 0;
-        color: $grey;
+        color: $grey-drk;
         width: 70%;
       }
     }

@@ -3,12 +3,15 @@
     <Hx msg="Bookmarks" />
     <!-- TODO: refactorizar filtros <FiltrosComp /> -->
     <div class="filtro">
-      <input
-        v-model="search"
-        type="text"
-        value=""
-        @keyup.enter="filterElements"
-      />
+      <label for=""
+        >busqueda
+        <input
+          v-model="search"
+          type="text"
+          value=""
+          @keyup.enter="filterElements"
+        />
+      </label>
       <button class="btn-primary" @click="clearFiltros">
         limpiar filtros
       </button>
@@ -127,7 +130,15 @@ export default {
 .filtro {
   display: flex;
   justify-items: flex-start;
-  margin-left: 50px;
+  margin-left: 10px;
+  align-items: center;
+
+  label,
+  input {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: $grey-drkr;
+  }
 
   .btn-primary {
     border-radius: 5px;
