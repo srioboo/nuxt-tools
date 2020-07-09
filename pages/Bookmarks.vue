@@ -58,7 +58,6 @@ export default {
   },
   async asyncData({ $content, params, error, store }) {
     // usando la api de content
-    console.log('en el asyncdata');
 
     const response = await $content('db')
       .fetch()

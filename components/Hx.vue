@@ -21,8 +21,10 @@ export default Vue.extend({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 h1 {
-  margin-top: 20px;
+  margin-left: 20px;
   font-size: 1.3em;
+  display: flex;
+  justify-content: flex-start;
 }
 
 h3 {

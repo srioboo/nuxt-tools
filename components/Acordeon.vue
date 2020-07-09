@@ -65,9 +65,24 @@ export default {
       align-content: flex-start;
       text-decoration: none;
 
+      display: flex;
+      align-items: flex-start;
+
+      @media screen and (max-width: $desktop) {
+        flex-direction: row;
+      }
+
+      @media screen and (max-width: $tablet) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: $mobile) {
+        flex-direction: column;
+      }
+
       .name {
         border: 0;
-        width: 20%;
+        //width: 20%;
         color: $green-lgt-30;
         font-weight: 900;
       }
@@ -75,7 +90,10 @@ export default {
       .url {
         border: 0;
         color: $grey-drk;
-        width: 70%;
+        //width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
     }
   }
