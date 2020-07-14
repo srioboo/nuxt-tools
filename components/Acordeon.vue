@@ -82,7 +82,9 @@ export default {
 
       .name {
         border: 0;
-        //width: 20%;
+        display: flex;
+        align-content: flex-start;
+        width: 15%;
         color: $green-lgt-30;
         font-weight: 900;
       }
@@ -90,7 +92,9 @@ export default {
       .url {
         border: 0;
         color: $grey-drk;
-        //width: 100%;
+        display: flex;
+        align-content: flex-start;
+        width: 85%;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
