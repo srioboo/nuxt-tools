@@ -1,22 +1,13 @@
 <template>
   <nav id="navmenu">
     <router-link tag="div" class="nav-link" to="/" exact>
-      Home
-    </router-link>
-    <router-link tag="div" class="nav-link" to="/bookmarks" exact>
       Bookmaks
-      <!-- Ruta anidada??
-      <router-link tag="div" class="nav-link" :to="{ name: 'Flexbox' }" exact>
-        Flexbox
-      </router-link> -->
     </router-link>
-    <div class="nav-link" @click="toggleShow">
-      Editores y Otros
-    </div>
+    <!--<router-link tag="div" class="nav-link" to="/bookmarks" exact>
+      Bookmaks
+    </router-link>-->
+    <!--<div class="nav-link" @click="toggleShow">Editores y Otros</div>
     <div class="sub-nav-group hide">
-      <!-- <router-link tag="div" class="sub-nav-link" to="/ckeditor" exact>
-        Ckeditor
-      </router-link> -->
       <router-link tag="div" class="sub-nav-link" to="/quilleditor" exact>
         Quill
       </router-link>
@@ -28,10 +19,7 @@
       >
         Flexbox
       </router-link>
-    </div>
-    <router-link tag="div" class="nav-link" :to="{ path: 'rest' }" exact>
-      Rest
-    </router-link>
+    </div>-->
   </nav>
 </template>
 
