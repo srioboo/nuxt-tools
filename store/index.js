@@ -14,7 +14,8 @@ export const state = () => ({
 
 export const mutations = {
   [GET_BOOKMARKS](state, bookmarks) {
-    state.bookmarks.push(bookmarks);
+    // state.bookmarks.push(bookmarks);
+    state.bookmarks = bookmarks;
   },
   [SET_BKMS](state, response) {
     state.bookmarks = response;
@@ -25,7 +26,8 @@ export const actions = {
   async getBookmarksAction(context) {
     console.log('SRN getBookmarksAction');
     const bookmarks = await dataService.getBookmarks();
-    context.commit('getBookmarks', bookmarks);
+    // context.commit('getBookmarks', bookmarks);
+    context.commit(GET_BOOKMARKS, bookmarks);
   },
 };
 

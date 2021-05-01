@@ -101,7 +101,7 @@ export default {
    ** Global CSS
    */
   css: [
-    '@/assets/css/_variables.scss',
+    // '@/assets/css/_variables.scss',
     'quill/dist/quill.snow.css',
     'quill/dist/quill.bubble.css',
     'quill/dist/quill.core.css',

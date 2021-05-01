@@ -3,12 +3,15 @@
     <Hx msg="Bookmarks" />
     <!-- TODO: refactorizar filtros <FiltrosComp /> -->
     <div class="filtro">
-      <input
-        v-model="search"
-        type="text"
-        value=""
-        @keyup.enter="filterElements"
-      />
+      <label for=""
+        >busqueda
+        <input
+          v-model="search"
+          type="text"
+          value=""
+          @keyup.enter="filterElements"
+        />
+      </label>
       <button class="btn-primary" @click="clearFiltros">
         limpiar filtros
       </button>
@@ -26,10 +29,12 @@
       <Acordeon :grp="grupos.nombre">
         <div class="grupo">
           <div v-for="bkm in grupos.direcciones" :key="bkm.name">
-            <div v-if="esBuscado(bkm.name)" class="name">
-              <a :href="bkm.url">{{ bkm.name }}</a>
-            </div>
-            <div v-if="esBuscado(bkm.name)" class="url">{{ bkm.url }}</div>
+            <a :href="bkm.url">
+              <div v-if="esBuscado(bkm.name)" class="name">
+                {{ bkm.name }}
+              </div>
+              <div v-if="esBuscado(bkm.name)" class="url">{{ bkm.url }}</div>
+            </a>
           </div>
         </div>
       </Acordeon>
@@ -54,9 +59,7 @@ export default {
   async asyncData({ $content, params, error, store }) {
     // usando la api de content
 
-    console.log('en el asyncdata');
-
-    const response = await $content('./db')
+    const response = await $content('db')
       .fetch()
       .catch(err => {
         // error({ statusCode: 404, message: 'Page not found' });
@@ -67,28 +70,23 @@ export default {
 
     // store.commit('reloadBkms', response);
 
-    return { response };
+    // return { response }; // esto es solo si es directo y no a traves del state
   },
   data() {
     return {
       search: '',
       filtrado: [],
-      response: [],
     };
   },
   computed: {
     ...mapState(['bookmarks']),
   },
-  async created() {
-    // await this.loadBookmarks();
-  },
-
   methods: {
     ...mapActions(['getBookmarksAction']),
-    async loadBookmarks() {
+    /* async loadBookmarks() {
       console.log('SRN cargando... ');
       await this.getBookmarksAction();
-    },
+    }, */
     // TODO: completar el filtro
     filterElements() {
       this.bookmarks.forEach(group => {
@@ -131,18 +129,26 @@ export default {
 .filtro {
   display: flex;
   justify-items: flex-start;
-  margin-left: 50px;
+  margin-left: 10px;
+  align-items: center;
+
+  label,
+  input {
+    padding: 5px 10px;
+    margin-right: 5px;
+    color: $grey-drkr;
+  }
 
   .btn-primary {
     border-radius: 5px;
-    border: 1px solid blue;
-    background-color: blue;
+    border: 1px solid $blue;
+    background-color: $blue;
     height: 30px;
-    color: white;
+    color: $white;
     font-weight: 900;
     padding: 5px 10px;
     margin: 0 5px;
-    box-shadow: 2px 2px 3px 0px black;
+    box-shadow: 2px 2px 3px 0px $black;
   }
 
   .btn-filtro {
@@ -150,8 +156,8 @@ export default {
     padding: 0 10px;
     border: 0px;
     border-radius: 5px;
-    background-color: gray;
-    color: white;
+    background-color: $grey;
+    color: $white;
   }
 }
 </style>

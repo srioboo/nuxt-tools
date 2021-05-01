@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-tools",
+  "name": "nuxtools",
   "version": "1.0.0",
   "description": "Nuxt utilities apps",
   "author": "salrio",
@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest"
+    "test": "jest",
+    "heroku-postbuild": "npm run build"
   },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": "npm run lint",
@@ -46,10 +47,13 @@
     "husky": "^4.0.0",
     "jest": "^24.1.0",
     "lint-staged": "^10.0.0",
-    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.32.12",
+    "sass-loader": "10.1.1",
     "stylelint": "^10.1.0",
     "vue-jest": "^4.0.0-0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/srioboo/VueTools.git",
+  "license": "MIT"
 }

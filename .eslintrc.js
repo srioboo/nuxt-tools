@@ -36,5 +36,6 @@ module.exports = {
         ignoreWhenBindingPresent: true,
       },
     ],
+		'vue/comment-directive': 'off',
   }
 }

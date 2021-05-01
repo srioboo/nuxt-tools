@@ -48,7 +48,6 @@ export default {
 }
 
 .grupo {
-  margin: 5px 20px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,14 +55,50 @@ export default {
 
   div {
     margin: 5px 0;
-    display: flex;
-    align-content: flex-start;
+    border: 1px solid $grey-lgt-75; // #80808070;
+    padding: 0px 5px;
+    border-radius: 9px;
 
-    .name {
-      width: 20%;
-    }
-    .url {
-      width: 70%;
+    a {
+      margin: 5px 0;
+      display: flex;
+      align-content: flex-start;
+      text-decoration: none;
+
+      display: flex;
+      align-items: flex-start;
+
+      @media screen and (max-width: $desktop) {
+        flex-direction: row;
+      }
+
+      @media screen and (max-width: $tablet) {
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: $mobile) {
+        flex-direction: column;
+      }
+
+      .name {
+        border: 0;
+        display: flex;
+        align-content: flex-start;
+        width: 15%;
+        color: $green-lgt-30;
+        font-weight: 900;
+      }
+
+      .url {
+        border: 0;
+        color: $grey-drk;
+        display: flex;
+        align-content: flex-start;
+        width: 85%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
     }
   }
 }

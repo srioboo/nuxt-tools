@@ -23,13 +23,13 @@
       <router-link
         tag="div"
         class="sub-nav-link"
-        :to="{ name: 'Flexbox' }"
+        :to="{ path: 'flexbox' }"
         exact
       >
         Flexbox
       </router-link>
     </div>
-    <router-link tag="div" class="nav-link" :to="{ name: 'Rest' }" exact>
+    <router-link tag="div" class="nav-link" :to="{ path: 'rest' }" exact>
       Rest
     </router-link>
   </nav>
@@ -83,12 +83,12 @@ nav {
     border-bottom: 1px solid $green;
 
     &.router-link-exact-active {
-      background-color: $green-darker;
+      background-color: $green-drkr;
       color: $white;
     }
 
     &.router-link-active {
-      background-color: $green-darker;
+      background-color: $green-drkr;
       color: $white;
     }
 
@@ -114,8 +114,8 @@ nav {
     height: 50px;
     align-items: center;
     padding-left: 30px;
-    background-color: $green-light;
-    border-bottom: 1px solid $green;
+    background-color: $green-lgt-70;
+    border-bottom: 1px solid $primary;
   }
 }
 </style>
