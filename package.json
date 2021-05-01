@@ -47,10 +47,13 @@
     "husky": "^4.0.0",
     "jest": "^24.1.0",
     "lint-staged": "^10.0.0",
-    "node-sass": "^4.14.1",
     "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
+    "sass": "^1.32.12",
+    "sass-loader": "10.1.1",
     "stylelint": "^10.1.0",
     "vue-jest": "^4.0.0-0"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/srioboo/VueTools.git",
+  "license": "MIT"
 }
