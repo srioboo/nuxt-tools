@@ -1,9 +1,10 @@
-import axios from 'axios';
 import { API } from './config';
 
 const getBookmarks = async function() {
   try {
-    const response = await axios.get(`${API}/bookmarks`);
+    // const response = await axios.get(`${API}/bookmarks`);
+
+    const response = await $fetch.get(`${API}/bookmarks`);
 
     // this.$content
 
