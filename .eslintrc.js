@@ -5,14 +5,15 @@ module.exports = {
     node: true
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    parser: '@typescript-eslint/parser',
   },
   extends: [
-    '@nuxtjs',
-    'prettier',
-    'prettier/vue',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:nuxt/recommended',
+    'plugin:vue/vue3-recommended',
     'plugin:prettier/recommended',
-    'plugin:nuxt/recommended'
   ],
   plugins: [
     'prettier'
