@@ -8,7 +8,6 @@
         <input
           v-model="search"
           type="text"
-          value=""
           @keyup.enter="filterElements"
         />
       </label>
@@ -127,6 +126,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/css/_variables.scss';
 .filtro {
   display: flex;
   justify-items: flex-start;
