@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../assets/css/_variables.scss';
+@import '../assets/css/_media.scss';
+
+
 .colapGroup {
   margin: 20px;
   width: 100%;

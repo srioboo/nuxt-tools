@@ -48,6 +48,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/css/_variables.scss';
+
 header {
   // background-color: $primary;
   display: flex;

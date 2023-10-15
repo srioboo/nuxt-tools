@@ -44,6 +44,7 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+@import '../assets/css/_variables.scss';
 nav {
  // box-shadow: 0px 0px 5px 0px $green;
  // color: $white;
