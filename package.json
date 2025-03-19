@@ -28,7 +28,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@nuxtjs/style-resources": "^1.0.0",
     "concurrently": "^5.2.0",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.16.0",
     "vue-quill-editor": "^3.0.6",
     "vuex-module-decorators": "^0.17.0"
   },
