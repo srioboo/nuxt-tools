@@ -45,8 +45,8 @@ export default Vue.extend({
 
 <style lang="scss">
 nav {
-  box-shadow: 0px 0px 5px 0px $green;
-  color: $white;
+ // box-shadow: 0px 0px 5px 0px $green;
+ // color: $white;
   width: 20vw;
   height: 100vh;
   font-weight: bolder;
@@ -67,10 +67,10 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color: $black;
-    border-bottom: 1px solid $green;
+   // color: $black;
+   // border-bottom: 1px solid $green;
 
-    &.router-link-exact-active {
+   /* &.router-link-exact-active {
       background-color: $green-drkr;
       color: $white;
     }
@@ -92,18 +92,18 @@ nav {
       justify-content: center;
       border-bottom: 0px;
     }
-  }
+  }*/
 
   .sub-nav-link {
     display: flex;
     justify-content: stretch;
     flex-direction: row;
-    color: $black;
+    // color: $black;
     height: 50px;
     align-items: center;
     padding-left: 30px;
-    background-color: $green-lgt-70;
-    border-bottom: 1px solid $primary;
+    // background-color: $green-lgt-70;
+    // border-bottom: 1px solid $primary;
   }
 }
 </style>

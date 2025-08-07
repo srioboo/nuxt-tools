@@ -40,11 +40,11 @@ export default {
   align-items: center;
   padding-left: 20px;
   width: 100%;
-  background-color: $primary;
+  // background-color: $primary;
   height: 30px;
-  border-radius: $radius-large;
-  color: $white;
-  font-weight: $weight-bold;
+  // border-radius: $radius-large;
+  //color: $white;
+  //font-weight: $weight-bold;
 }
 
 .grupo {
@@ -55,7 +55,7 @@ export default {
 
   div {
     margin: 5px 0;
-    border: 1px solid $grey-lgt-75; // #80808070;
+    //border: 1px solid $grey-lgt-75; // #80808070;
     padding: 0px 5px;
     border-radius: 9px;
 
@@ -68,7 +68,7 @@ export default {
       display: flex;
       align-items: flex-start;
 
-      @media screen and (max-width: $desktop) {
+      /*@media screen and (max-width: $desktop) {
         flex-direction: row;
       }
 
@@ -78,20 +78,20 @@ export default {
 
       @media screen and (max-width: $mobile) {
         flex-direction: column;
-      }
+      }*/
 
       .name {
         border: 0;
         display: flex;
         align-content: flex-start;
         width: 15%;
-        color: $green-lgt-30;
+        //color: $green-lgt-30;
         font-weight: 900;
       }
 
       .url {
         border: 0;
-        color: $grey-drk;
+        //color: $grey-drk;
         display: flex;
         align-content: flex-start;
         width: 85%;

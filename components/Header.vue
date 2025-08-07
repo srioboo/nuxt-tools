@@ -49,11 +49,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 header {
-  background-color: $primary;
+  // background-color: $primary;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  color: $white;
+  // color: $white;
   height: 50px;
   align-items: center;
 
@@ -90,7 +90,7 @@ header {
       display: block;
       height: 3px;
       width: 25px;
-      background-color: $white;
+      //background-color: $white;
     }
   }
 }

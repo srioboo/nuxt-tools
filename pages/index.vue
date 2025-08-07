@@ -136,19 +136,19 @@ export default {
   input {
     padding: 5px 10px;
     margin-right: 5px;
-    color: $grey-drkr;
+   // color: $grey-drkr;
   }
 
   .btn-primary {
     border-radius: 5px;
-    border: 1px solid $blue;
-    background-color: $blue;
+  //  border: 1px solid $blue;
+  //  background-color: $blue;
     height: 30px;
-    color: $white;
+  //  color: $white;
     font-weight: 900;
     padding: 5px 10px;
     margin: 0 5px;
-    box-shadow: 2px 2px 3px 0px $black;
+ //   box-shadow: 2px 2px 3px 0px $black;
   }
 
   .btn-filtro {
@@ -156,8 +156,8 @@ export default {
     padding: 0 10px;
     border: 0px;
     border-radius: 5px;
-    background-color: $grey;
-    color: $white;
+  //  background-color: $grey;
+  //  color: $white;
   }
 }
 </style>
