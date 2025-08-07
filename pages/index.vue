@@ -8,7 +8,6 @@
         <input
           v-model="search"
           type="text"
-          value=""
           @keyup.enter="filterElements"
         />
       </label>

@@ -120,17 +120,17 @@ export default defineNuxtConfig({
   loading: { color: '#fff' },
   /*
    ** Global CSS
-   */
+   *
   css: [
     // '@/assets/css/_variables.scss',
     'quill/dist/quill.snow.css',
     'quill/dist/quill.bubble.css',
     'quill/dist/quill.core.css',
-  ],
+  ],*/
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~plugins/vue-quill-editor.js', ssr: false }],
+  // plugins: [{ src: '~plugins/vue-quill-editor.js', ssr: false }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -151,11 +151,9 @@ export default defineNuxtConfig({
   // axios: {},
   /*
    ** Build configuration
-   */
+
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+
     extend(config, ctx) {},
-  },
+  },*/
 });
