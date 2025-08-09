@@ -43,14 +43,9 @@ export default Vue.extend({
 });*/
 </script>
 
-<<<<<<< Updated upstream
-<style lang="scss">
-@import '../assets/css/_variables.scss';
-=======
 
 <style >
 /*
->>>>>>> Stashed changes
 nav {
  // box-shadow: 0px 0px 5px 0px $green;
  // color: $white;

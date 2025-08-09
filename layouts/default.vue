@@ -26,14 +26,9 @@
 };*/
 </script>
 
-<<<<<<< Updated upstream
-<style lang="scss">
-@import '../assets/css/_variables.scss';
-html {
-=======
 <style>
-/*html {
->>>>>>> Stashed changes
+/*@import '../assets/css/_variables.scss';
+html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
