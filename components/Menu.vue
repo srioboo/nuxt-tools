@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+/*import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Menu',
@@ -40,11 +40,17 @@ export default Vue.extend({
       elemento.nextElementSibling.classList.toggle('hide');
     },
   },
-});
+});*/
 </script>
 
+<<<<<<< Updated upstream
 <style lang="scss">
 @import '../assets/css/_variables.scss';
+=======
+
+<style >
+/*
+>>>>>>> Stashed changes
 nav {
  // box-shadow: 0px 0px 5px 0px $green;
  // color: $white;
@@ -70,7 +76,7 @@ nav {
     justify-content: flex-start;
    // color: $black;
    // border-bottom: 1px solid $green;
-
+*/
    /* &.router-link-exact-active {
       background-color: $green-drkr;
       color: $white;
@@ -93,7 +99,7 @@ nav {
       justify-content: center;
       border-bottom: 0px;
     }
-  }*/
+  }
 
   .sub-nav-link {
     display: flex;
@@ -106,5 +112,5 @@ nav {
     // background-color: $green-lgt-70;
     // border-bottom: 1px solid $primary;
   }
-}
+}*/
 </style>

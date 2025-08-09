@@ -27,7 +27,7 @@
 </template>
 
 <script lang="js">
-import Vue from 'vue';
+/*import Vue from 'vue';
 
 export default Vue.extend({
   name: 'Header',
@@ -44,7 +44,7 @@ export default Vue.extend({
       }
     },
   },
-});
+});*/
 </script>
 
 <style lang="scss" scoped>

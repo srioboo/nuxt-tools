@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import Menu from '@/components/Menu.vue';
-import Header from '@/components/Header.vue';
+//import Menu from '@/components/Menu.vue';
+//import Header from '@/components/Header.vue';
 
-export default {
+/*export default {
   components: {
     Menu,
     Header,
@@ -23,12 +23,17 @@ export default {
       msg: 'value',
     };
   },
-};
+};*/
 </script>
 
+<<<<<<< Updated upstream
 <style lang="scss">
 @import '../assets/css/_variables.scss';
 html {
+=======
+<style>
+/*html {
+>>>>>>> Stashed changes
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
@@ -92,10 +97,5 @@ main {
     align-content: center;
   }
 
-  /*ul {
-      align-items: center;
-      font-weight: bolder;
-      align-content: center;
-    }*/
-}
+}*/
 </style>

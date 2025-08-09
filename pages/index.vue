@@ -18,7 +18,7 @@
     </div>
 
     <!-- TODO: evitar el bookmarks[0], modificando data.services.ts?? -->
-    <div
+    <!--<div
       v-for="grupos in bookmarks.bookmarks"
       :key="grupos.id"
       class="flex-content"
@@ -35,22 +35,24 @@
           </div>
         </div>
       </Acordeon>
-    </div>
+    </div>-->
   </main>
 </template>
 
-<script>
-import { mapActions, mapState } from 'vuex';
-// @ is an alias to /src
-import Hx from '@/components/Hx.vue';
-import Acordeon from '@/components/Acordeon.vue';
-// TODO: refactorizar filtros import FiltrosComp from '@/components/FiltrosComponent';
+<script lang="ts">
+// import { Hx } from '#components';
 
+//import { mapActions, mapState } from 'vuex';
+// @ is an alias to /src
+// import Hx from '@/components/Hx.vue';
+//import Acordeon from '@/components/Acordeon.vue';
+// TODO: refactorizar filtros import FiltrosComp from '@/components/FiltrosComponent';
+/*
 export default {
   name: 'Bookmarks',
   components: {
-    Hx,
-    Acordeon,
+    //Hx,
+   // Acordeon,
     // TODO: refactorizar filtros FiltrosComp,
   },
   async asyncData({ $content, params, error, store }) {
@@ -76,15 +78,12 @@ export default {
       filtrado: [],
     };
   },
-  computed: {
-    ...mapState(['bookmarks']),
-  },
+  // computed: {
+  //  ...mapState(['bookmarks']),
+  //},
   methods: {
-    ...mapActions(['getBookmarksAction']),
-    /* async loadBookmarks() {
-      console.log('SRN cargando... ');
-      await this.getBookmarksAction();
-    }, */
+    //...mapActions(['getBookmarksAction']),
+
     // TODO: completar el filtro
     filterElements() {
       // eslint-disable-next-line prettier/prettier
@@ -117,12 +116,8 @@ export default {
       }
     },
   },
-  /* mutations: {
-    reloadBkms(state, response) {
-      state.bookmarks = response;
-    },
-  }, */
-};
+
+};*/
 </script>
 
 <style lang="scss" scoped>

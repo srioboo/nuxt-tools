@@ -1,13 +1,19 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-08-17',
-    modules: [
-    '@vueuse/nuxt',
+  compatibilityDate: '2025-07-15',
+  devtools: { enabled: true },
+  css: ['~/assets/css/main.scss'],
+  modules: [
     '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/test-utils',
+    '@nuxt/ui',
+    '@nuxt/image',
+    '@nuxt/scripts'
   ],
-    content: {
+  content: {
     // documentDriven: true,
-    highlight: {
+    /*highlight: {
       preload: ['html', 'shell'],
       theme: {
         // Default theme (same as single string)
@@ -17,7 +23,7 @@ export default defineNuxtConfig({
         // Theme used if `html.sepia`
         sepia: 'monokai',
       },
-    },
+    },*/
   },
   app: {
       /*
@@ -29,7 +35,7 @@ export default defineNuxtConfig({
           { charset: 'utf-8' },
           { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           {
-            hid: 'description',
+            //hid: 'description',
             name: 'description',
             content: process.env.npm_package_description || '',
           },
@@ -117,43 +123,5 @@ export default defineNuxtConfig({
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   *
-  css: [
-    // '@/assets/css/_variables.scss',
-    'quill/dist/quill.snow.css',
-    'quill/dist/quill.bubble.css',
-    'quill/dist/quill.core.css',
-  ],*/
-  /*
-   ** Plugins to load before mounting the App
-   */
-  // plugins: [{ src: '~plugins/vue-quill-editor.js', ssr: false }],
-  /*
-   ** Nuxt.js dev-modules
-   */
-  buildModules: [
-    // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/style-resources',
-  ],
-  styleResources: {
-    scss: ['./assets/css/*.scss'],
-  },
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  // axios: {},
-  /*
-   ** Build configuration
-
-  build: {
-
-    extend(config, ctx) {},
-  },*/
+  //loading: { color: '#fff' },
 });
