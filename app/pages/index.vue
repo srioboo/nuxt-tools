@@ -1,6 +1,10 @@
 <template>
   <main>
-    <Hx msg="Bookmarks" />
+  <h1 class="bg-red-700 text-3xl font-bold underline">
+    Hello world!
+  </h1>
+   <!-- <Hx msg="Bookmarks" />-->
+    <Hx />
     <!-- TODO: refactorizar filtros <FiltrosComp /> -->
     <div class="filtro">
       <label for=""
@@ -121,7 +125,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/css/_variables.scss';
+/*@import '../assets/css/_variables.scss';
 .filtro {
   display: flex;
   justify-items: flex-start;
@@ -155,5 +159,5 @@ export default {
   //  background-color: $grey;
   //  color: $white;
   }
-}
+}*/
 </style>

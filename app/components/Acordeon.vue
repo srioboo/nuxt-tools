@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/css/_variables.scss';
+/*@import '../assets/css/_variables.scss';
 @import '../assets/css/_media.scss';
 
 
@@ -72,7 +72,7 @@ export default {
       display: flex;
       align-items: flex-start;
 
-      /*@media screen and (max-width: $desktop) {
+      @media screen and (max-width: $desktop) {
         flex-direction: row;
       }
 
@@ -82,7 +82,7 @@ export default {
 
       @media screen and (max-width: $mobile) {
         flex-direction: column;
-      }*/
+      }
 
       .name {
         border: 0;
@@ -105,5 +105,5 @@ export default {
       }
     }
   }
-}
+}*/
 </style>

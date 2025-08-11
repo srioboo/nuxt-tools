@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <div class="flex-content">
+    <div class="bg-blue flex flex-content">
       <Menu />
       <router-view />
     </div>
@@ -27,6 +27,7 @@
 </script>
 
 <style>
+@import "tailwindcss"
 /*@import '../assets/css/_variables.scss';
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

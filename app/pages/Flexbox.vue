@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../assets/css/_variables.scss';
+/*@import '../assets/css/_variables.scss';
 .flex-content-div {
   border: 1px solid $grey; //#555;
   display: -webkit-flex;
@@ -56,5 +56,5 @@ export default {
 
 .red {
   border: 1px solid $red;
-}
+}*/
 </style>

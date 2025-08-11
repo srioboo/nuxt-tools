@@ -21,7 +21,9 @@
     "@nuxt/scripts": "0.11.10",
     "@nuxt/test-utils": "3.19.2",
     "@nuxt/ui": "3.3.0",
+    "@tailwindcss/vite": "^4.1.11",
     "@unhead/vue": "^2.0.3",
+    "better-sqlite3": "^12.2.0",
     "eslint": "^9.0.0",
     "nuxt": "^4.0.1",
     "typescript": "^5.6.3",
@@ -29,8 +31,5 @@
     "vue-router": "^4.5.1"
   },
   "repository": "https://github.com/srioboo/VueTools.git",
-  "license": "MIT",
-  "devDependencies": {
-    "sass": "^1.90.0"
-  }
+  "license": "MIT"
 }

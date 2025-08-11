@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="bg-green-400 plex ">
     <div class="burger" @click="togleMenu()">
       <div class="line1"></div>
       <div class="line1"></div>
@@ -47,8 +47,9 @@ export default Vue.extend({
 });*/
 </script>
 
-<style lang="scss" scoped>
-@import '../assets/css/_variables.scss';
+
+<style >
+/*@import '../assets/css/_variables.scss';
 
 header {
   // background-color: $primary;
@@ -95,5 +96,5 @@ header {
       //background-color: $white;
     }
   }
-}
+}*/
 </style>
