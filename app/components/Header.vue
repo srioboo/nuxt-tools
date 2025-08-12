@@ -1,9 +1,9 @@
 <template>
-  <header class="bg-green-400 plex ">
-    <div class="burger" @click="togleMenu()">
-      <div class="line1"></div>
-      <div class="line1"></div>
-      <div class="line1"></div>
+  <header class="bg-[#1c6460] flex flex-row justify-between items-center h-12 text-white">
+    <div class="burger w-10 h-6 flex flex-wrap justify-around self-center items-center cursor-pointer" @click="togleMenu()">
+      <div class="line1 block h-0.5 w-6 bg-white"></div>
+      <div class="line1 block h-0.5 w-6 bg-white"></div>
+      <div class="line1 block h-0.5 w-6 bg-white"></div>
     </div>
 
     <div class="logo">
