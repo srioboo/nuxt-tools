@@ -1,10 +1,7 @@
 <template>
-  <main>
-  <h1 class="bg-red-700 text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <main class="w-full mt-4">
    <!-- <Hx msg="Bookmarks" />-->
-    <Hx />
+    <Hx msg="bookmarks"/>
     <!-- TODO: refactorizar filtros <FiltrosComp /> -->
     <div class="filtro">
       <label for=""
